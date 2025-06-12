@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#131712"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:gravity="center_vertical">
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:text="Courts"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_height="wrap_content" />
+  </LinearLayout>
+
+  <TextView
+      android:id="@+id/availableSlotsHeader"
+      android:text="Available Court Slots"
+      android:textColor="@android:color/white"
+      android:textSize="18sp"
+      android:textStyle="bold"
+      android:layout_marginTop="24dp"
+      android:layout_marginBottom="8dp"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content" />
+
+  <TextView
+      android:text="Select Court"
+      android:textColor="@android:color/white"
+      android:textStyle="bold"
+      android:layout_marginTop="24dp"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content" />
+
+  <Spinner
+      android:id="@+id/courtSpinner"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@drawable/bg_input"
+      android:padding="12dp"
+      android:layout_marginTop="8dp" />
+
+  <TextView
+      android:text="Select Date"
+      android:textColor="@android:color/white"
+      android:textStyle="bold"
+      android:layout_marginTop="16dp"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content" />
+
+  <Spinner
+      android:id="@+id/dateSpinner"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@drawable/bg_input"
+      android:padding="12dp"
+      android:layout_marginTop="8dp" />
+
+  <TextView
+      android:id="@+id/timesHeader"
+      android:text="Available Times"
+      android:textColor="@android:color/white"
+      android:textStyle="bold"
+      android:layout_marginTop="24dp"
+      android:layout_marginBottom="8dp"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content" />
+
+  <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/timeSlotsRecyclerView"
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_weight="1"
+      android:clipToPadding="false"
+      android:paddingBottom="16dp" />
+</LinearLayout>

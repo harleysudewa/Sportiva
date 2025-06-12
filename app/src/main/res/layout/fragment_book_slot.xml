@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#131612"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Book a Slot"
+                android:textColor="#FFFFFF"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <Spinner
+            android:id="@+id/courtSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@drawable/bg_input"
+            android:padding="12dp"
+            android:layout_marginTop="12dp"
+            android:textSize="16sp"
+            android:spinnerMode="dropdown" />
+
+        <EditText
+            android:id="@+id/bookingDateInput"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:hint="Booking Date (YYYY-mm-dd)"
+            android:background="@drawable/bg_input"
+            android:padding="12dp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#a6b3a2"
+            android:textSize="16sp"
+            android:layout_marginTop="12dp" />
+
+        <EditText
+            android:id="@+id/bookingTimeInput"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:hint="Booking Time (HH:MM)"
+            android:background="@drawable/bg_input"
+            android:padding="12dp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#a6b3a2"
+            android:textSize="16sp"
+            android:layout_marginTop="12dp" />
+
+        <EditText
+            android:id="@+id/bookingDurationInput"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:hint="Booking Duration (Minutes)"
+            android:background="@drawable/bg_input"
+            android:singleLine="true"
+            android:padding="12dp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#a6b3a2"
+            android:textSize="16sp"
+            android:layout_marginTop="12dp" />
+
+        <Button
+            android:id="@+id/bookNowButton"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="24dp"
+            android:text="Book Now"
+            android:textSize="17dp"
+            android:backgroundTint="#8cd279"
+            android:textColor="#131612"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</ScrollView>
