@@ -101,7 +101,7 @@ public class MyBookingsFragment extends Fragment {
             @Override
             public void onFailure(Call<MyBookingsResponse> call, Throwable t) {
                 showLoading(false);
-                showError("Error: " + (t.getMessage() != null ? t.getMessage() : "Unknown error"));
+                showError("Error: " + (t.getMessage() != null ? t.getMessage() : "Unknown error."));
             }
         });
     }

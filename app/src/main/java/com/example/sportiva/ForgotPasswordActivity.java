@@ -73,9 +73,9 @@ public class ForgotPasswordActivity extends AppCompatActivity {
                         JSONObject errorObj = new JSONObject(errorJson);
                         String message = errorObj.getString("message");
 
-                        Toast.makeText(ForgotPasswordActivity.this, "Failed: " + message, Toast.LENGTH_SHORT).show();
+                        Toast.makeText(ForgotPasswordActivity.this, "Send Reset Password Failed: " + message, Toast.LENGTH_SHORT).show();
                     } catch (Exception e) {
-                        Toast.makeText(ForgotPasswordActivity.this, "Failed: Unknown error", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(ForgotPasswordActivity.this, "Send Reset Password Failed: Unknown error", Toast.LENGTH_SHORT).show();
                     }
                 }
             }

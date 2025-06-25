@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.widget.*;
 import androidx.appcompat.app.AppCompatActivity;
 
+import org.json.JSONObject;
+
 import java.util.Arrays;
 
 import okhttp3.ResponseBody;
@@ -77,13 +79,21 @@ public class PaymentActivity extends AppCompatActivity {
                         Toast.makeText(PaymentActivity.this, "Payment successful!", Toast.LENGTH_LONG).show();
                         finish();
                     } else {
-                        Toast.makeText(PaymentActivity.this, "Failed to confirm payment.", Toast.LENGTH_SHORT).show();
+                        try {
+                            String errorJson = response.errorBody().string();
+                            JSONObject errorObj = new JSONObject(errorJson);
+                            String message = errorObj.getString("message");
+
+                            Toast.makeText(PaymentActivity.this, "Payment failed: " + message, Toast.LENGTH_SHORT).show();
+                        } catch (Exception e) {
+                            Toast.makeText(PaymentActivity.this, "Payment failed: Unknown error", Toast.LENGTH_SHORT).show();
+                        }
                     }
                 }
 
                 @Override
                 public void onFailure(Call<ResponseBody> call, Throwable t) {
-                    Toast.makeText(PaymentActivity.this, "An error occurred: " + t.getMessage(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(PaymentActivity.this, "Error: " + t.getMessage(), Toast.LENGTH_SHORT).show();
                 }
             });
         });

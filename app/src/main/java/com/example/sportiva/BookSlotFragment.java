@@ -146,7 +146,7 @@ public class BookSlotFragment extends Fragment {
 
                 @Override
                 public void onFailure(@NonNull Call<BookingResponse> call, @NonNull Throwable t) {
-                    Toast.makeText(getContext(), "An error occurred: " + t.getMessage(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), "Error: " + t.getMessage(), Toast.LENGTH_SHORT).show();
                 }
             });
         });
